@@ -13,33 +13,45 @@ h1{
 #todo{
     display: flex;
     margin: auto;
-    justify-content: center;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
     margin-top: 100px;
+    box-shadow: 3px 3px 5px black;
+    margin-bottom: 50px;
+    padding: 10px;
+    width: 70%;
+    border-radius: 25px;
+    background-color: gray;
 }
 
 #entry{
     background-color: azure;
     height: 40px;
-    width: 225px;
+    width: 70%;
     border-radius: 25px;
-    padding: 5px;
+    padding: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    border: none;
     text-align: center;
 }
 
 #submit{
     background-color: rgb(65, 65, 202);
     color: white;
-    width: 110px;
+    width: 30%;
     padding-right: 10px;
     padding-left: 10px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     margin: 0;
+    font-size: 100%;
     margin-left: 15px;
-    font-size: 24px;
     font-family: sans-serif;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 #submit:hover {
@@ -71,4 +83,96 @@ h1{
 .deleteClass:hover{
     background-color: white;
     color: red;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    flex-direction: column;
+}
+
+.todowrapper{
+    background-color: blue;
+    width: 400px;
+    margin: auto;
+    color:  white;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 2px 2px 5px black;
+}
+
+.delete{
+    margin: 0;
+    font-size: 16px;
+    height: 100%;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    cursor: pointer;
+}
+
+.delete:hover{
+    background-color: white;
+    color: red;
+}
+
+.up{
+    margin: 0;
+    font-size: 16px;
+    height: 100%;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.up:hover{
+    background-color: white;
+    color: green;
+}
+
+.down{
+    margin: 0;
+    font-size: 16px;
+    height: 100%;
+    background-color: yellow;
+    font-weight: 600;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+}
+
+.down:hover{
+    background-color: black;
+    color: yellow;
+}
+
+.text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 65%;
+    margin: auto;
+    display: flex;
+}
+
+.button-container{
+    width: 40%;
+    display: flex;
+    margin: auto;
+    height: 80px;
+    box-shadow: 5px 5px 3px black;
+    border-radius: 25px;
+    justify-content: flex-end;
 }

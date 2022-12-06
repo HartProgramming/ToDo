@@ -134,27 +134,6 @@ class ToDoObject {
   }
 }
 
-function gatherStorage() {
-  if (localStorage.getItem("array") !== "[]") {
-    console.log("hi");
-    for (let i of JSON.parse(localStorage.getItem("array"))) {
-      const free = new ToDoObject(
-        document.createElement("button"),
-        document.createElement("div"),
-        document.createElement("h4"),
-        document.createElement("button"),
-        document.createElement("button"),
-        document.createElement("div"),
-        i.todo
-      );
-      free.returnFormTodo(wrapper);
-      free.returnEvents();
-      toDoArray.push(free);
-    }
-  }
-}
-gatherStorage();
-
 const todoBlank = new ToDoObject(
   document.createElement("button"),
   document.createElement("div"),
@@ -199,3 +178,24 @@ window.addEventListener("keydown", function (e) {
     Submission.newToDo();
   }
 });
+
+function gatherStorage() {
+  if (localStorage.getItem("array") !== null) {
+    console.log("hi");
+    for (let i of JSON.parse(localStorage.getItem("array"))) {
+      const free = new ToDoObject(
+        document.createElement("button"),
+        document.createElement("div"),
+        document.createElement("h4"),
+        document.createElement("button"),
+        document.createElement("button"),
+        document.createElement("div"),
+        i.todo
+      );
+      free.returnFormTodo(wrapper);
+      free.returnEvents();
+      toDoArray.push(free);
+    }
+  }
+}
+gatherStorage()
